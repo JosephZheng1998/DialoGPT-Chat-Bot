@@ -1,5 +1,5 @@
 # DialoGPT-Chat-Bot
-This repo contains the DialoGPT Models for CMU 11747 NN for NLP. The code and README is based on the [repo](https://github.com/huggingface/transfer-learning-conv-ai) accompany the blog post [🦄 How to build a State-of-the-Art Conversational AI with Transfer Learning](https://medium.com/@Thomwolf/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313).
+This repo contains the DialoGPT Models for CMU 11747 NN for NLP by Tiancheng Zheng, Junda An, and Ariel Xiao. The code and README is based on the [repo](https://github.com/huggingface/transfer-learning-conv-ai) accompanying the blog post [🦄 How to build a State-of-the-Art Conversational AI with Transfer Learning](https://medium.com/@Thomwolf/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313).
 
 ## Installation
 
@@ -10,31 +10,6 @@ git clone https://github.com/JosephZheng1998/DialoGPT-Chat-Bot.git
 cd DialoGPT-Chat-Bot
 pip3 install -r requirements.txt
 python3 -m spacy download en
-```
-
-## Installation with Docker
-
-To install using docker please build the self-contained image:
-
-```bash
-docker build -t convai .
-```
-
-_Note: Make sure your Docker setup allocates enough memory to building the container. Building with the default of 1.75GB will fail due to large Pytorch wheel._
-
-You can then enter the image  
-
-```bash
-ip-192-168-22-157:transfer-learning-conv-ai loretoparisi$ docker run --rm -it convai bash
-root@91e241bb823e:/# ls
-Dockerfile  README.md  boot                  dev  home         lib    media  models  proc              root  sbin  sys  train.py  utils.py
-LICENCE     bin        convai_evaluation.py  etc  interact.py  lib64  mnt    opt     requirements.txt  run   srv   tmp  usr       var
-```
-
-You can then run the `interact.py` script on the pretrained model:
-
-```bash
-python3 interact.py --model models/
 ```
 
 ## Using the training script
